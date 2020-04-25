@@ -2,8 +2,11 @@
   background-image: url("https://ad-webapp.s3.amazonaws.com/second-section-background.png");
   height: 70vh;
   background-size: cover;
-  background-position: top;
+  background-position: top 50% right 50%;
 
+  @include respond(laptop) {
+    background-position: top 100% right 50%;
+  }
   @include respond(tab-land) {
     height: 80vh;
     padding: 8rem;
@@ -13,12 +16,21 @@
     background-position: left 37% bottom 50%;
   }
 
+  @include respond(phone-land) {
+    height: 100vh;
+    padding: 5rem;
+  }
+
   &__title {
     text-align: center;
     font-size: 4rem;
     letter-spacing: 0.2rem;
     font-style: italic;
     font-weight: 700;
+
+    @include respond(phone-land) {
+      font-size: 3rem;
+    }
   }
 
   &__paragraph {
@@ -33,6 +45,10 @@
 
     @include respond(tab-port) {
       transform: translateX(17rem);
+    }
+
+    @include respond(phone-land) {
+      transform: translateX(10rem);
     }
   }
 }

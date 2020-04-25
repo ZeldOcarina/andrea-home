@@ -17,6 +17,10 @@
       height: 40rem;
     }
 
+    @include respond(phone-land) {
+      height: 33rem;
+    }
+
     &-paragraph {
       width: 40%;
 
@@ -112,6 +116,10 @@
           font-size: 5.5rem;
           margin-top: -10px;
         }
+
+        @include respond(phone-land) {
+          font-size: 5rem;
+        }
       }
 
       .boxes__box-paragraph {
@@ -121,6 +129,11 @@
 
         @include respond(tab-port) {
           margin-bottom: 6rem;
+        }
+
+        @include respond(phone-land) {
+          margin-bottom: 6rem;
+          width: 50%;
         }
       }
     }
@@ -178,6 +191,12 @@
           margin: 0 auto;
           margin-left: 50%;
           transform: translateX(-50%);
+        }
+
+        @include respond(phone-land) {
+          margin: 0;
+          margin-left: 0;
+          transform: translateX(0);
         }
       }
     }

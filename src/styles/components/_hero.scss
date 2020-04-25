@@ -1,28 +1,31 @@
 .hero {
   height: 100vh;
   background-image: url("https://ad-webapp.s3.amazonaws.com/top-banner.jpg");
-  background-position: right top;
   background-size: cover;
   display: flex;
   flex-direction: column;
   color: $white;
   justify-content: center;
-
-  @include respond(tab-land) {
-    background-position: left 75% bottom 50%;
-  }
+  background-position: left 75% bottom 50%;
 
   @include respond(tab-port) {
     height: 85vh;
     background-position: left 70% bottom 50%;
   }
 
+  @include respond(phone-land) {
+    height: 100vh;
+    background-position: center;
+  }
+
   &__text-container {
-    margin-left: 40rem;
+    margin-left: 45rem;
     width: 35%;
+    margin-bottom: 10rem;
 
     @include respond(laptop) {
-      margin-left: 20rem;
+      margin-left: 30rem;
+      margin-bottom: 0;
     }
 
     @include respond(tab-port) {
@@ -46,6 +49,10 @@
     @include respond(tab-land) {
       font-size: 4.5rem;
     }
+
+    @include respond(phone-land) {
+      font-size: 2.8rem;
+    }
   }
 
   &__brush {
@@ -55,15 +62,26 @@
     @include respond(tab-land) {
       width: 30rem;
     }
+    @include respond(phone-land) {
+      width: 20rem;
+    }
   }
 
   &__subtitle {
     letter-spacing: 0.4rem;
     padding: 1.5rem 0;
+
+    @include respond(phone-land) {
+      font-size: 1.6rem;
+    }
   }
 
   &__paragraph {
     line-height: 1.5;
     font-size: 1.8rem;
+
+    @include respond(phone-land) {
+      font-size: 1.3rem;
+    }
   }
 }
