@@ -26,4 +26,9 @@ module.exports = merge(common, {
       },
     ],
   },
+  devServer: {
+    host: "192.168.1.97",
+    port: 8080,
+    disableHostCheck: true,
+  },
 });

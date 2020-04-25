@@ -4,6 +4,15 @@
   background-size: cover;
   background-position: top;
 
+  @include respond(tab-land) {
+    height: 80vh;
+    padding: 8rem;
+  }
+
+  @include respond(tab-port) {
+    background-position: left 37% bottom 50%;
+  }
+
   &__title {
     text-align: center;
     font-size: 4rem;
@@ -17,5 +26,13 @@
     margin: 0 auto;
     transform: translateX(15rem);
     letter-spacing: 0.1rem;
+
+    @include respond(tab-land) {
+      transform: translateX(10rem);
+    }
+
+    @include respond(tab-port) {
+      transform: translateX(17rem);
+    }
   }
 }

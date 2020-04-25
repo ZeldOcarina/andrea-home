@@ -8,16 +8,30 @@
   color: $white;
   justify-content: center;
 
+  @include respond(tab-land) {
+    background-position: left 75% bottom 50%;
+  }
+
+  @include respond(tab-port) {
+    height: 85vh;
+    background-position: left 70% bottom 50%;
+  }
+
   &__text-container {
-    margin-left: 20rem;
+    margin-left: 40rem;
     width: 35%;
+
+    @include respond(laptop) {
+      margin-left: 20rem;
+    }
+
+    @include respond(tab-port) {
+      margin-left: 15rem;
+    }
   }
 
   &__title-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
     width: 50rem;
   }
 
@@ -28,10 +42,19 @@
     color: $white;
     z-index: 1;
     font-size: 7rem;
+
+    @include respond(tab-land) {
+      font-size: 4.5rem;
+    }
   }
 
   &__brush {
     width: 50rem;
+    transform: translateY(10px);
+
+    @include respond(tab-land) {
+      width: 30rem;
+    }
   }
 
   &__subtitle {
