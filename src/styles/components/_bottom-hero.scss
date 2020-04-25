@@ -7,6 +7,7 @@
   @include respond(laptop) {
     background-position: top 100% right 50%;
   }
+
   @include respond(tab-land) {
     height: 80vh;
     padding: 8rem;
@@ -19,6 +20,11 @@
   @include respond(phone-land) {
     height: 100vh;
     padding: 5rem;
+  }
+
+  @include respond(phone-port) {
+    height: 100vh;
+    background-image: url("https://ad-webapp.s3.amazonaws.com/second-section-background-mobile.jpg");
   }
 
   &__title {
@@ -49,6 +55,13 @@
 
     @include respond(phone-land) {
       transform: translateX(10rem);
+    }
+
+    @include respond(phone-port) {
+      transform: translateX(0rem);
+      width: 100%;
+      text-align: center;
+      font-size: 1.6rem;
     }
   }
 }

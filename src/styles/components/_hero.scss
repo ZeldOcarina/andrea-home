@@ -18,6 +18,11 @@
     background-position: center;
   }
 
+  @include respond(phone-port) {
+    height: 90vh;
+    background-image: url("https://ad-webapp.s3.amazonaws.com/top-banner-mobile.jpg");
+  }
+
   &__text-container {
     margin-left: 45rem;
     width: 35%;
@@ -31,11 +36,22 @@
     @include respond(tab-port) {
       margin-left: 15rem;
     }
+
+    @include respond(phone-port) {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+      margin-top: 7rem;
+    }
   }
 
   &__title-container {
     text-align: left;
     width: 50rem;
+
+    @include respond(phone-port) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -51,7 +67,13 @@
     }
 
     @include respond(phone-land) {
-      font-size: 2.8rem;
+      font-size: 3.7rem;
+    }
+
+    @include respond(phone-port) {
+      text-align: center;
+      width: 100%;
+      transform: translateY(-6px);
     }
   }
 
@@ -63,7 +85,13 @@
       width: 30rem;
     }
     @include respond(phone-land) {
-      width: 20rem;
+      width: 28rem;
+    }
+
+    @include respond(phone-port) {
+      width: 28rem;
+      margin-left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -74,6 +102,10 @@
     @include respond(phone-land) {
       font-size: 1.6rem;
     }
+
+    @include respond(phone-port) {
+      font-size: 1.8rem;
+    }
   }
 
   &__paragraph {
@@ -82,6 +114,13 @@
 
     @include respond(phone-land) {
       font-size: 1.3rem;
+    }
+
+    @include respond(phone-port) {
+      transform: translateY(6rem);
+      font-size: 1.3rem;
+      padding: 0 3rem;
+      color: $black;
     }
   }
 }

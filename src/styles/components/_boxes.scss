@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
 
+  @include respond(phone-port) {
+    grid-template-columns: 1fr;
+  }
+
   &__box {
     height: 65rem;
     background-size: cover;
@@ -234,6 +238,10 @@
         display: inline-block;
         transform: translateY(-5px);
         z-index: 10;
+
+        @include respond(phone-port) {
+          font-size: 5.2rem;
+        }
       }
     }
   }
