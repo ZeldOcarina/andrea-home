@@ -1,0 +1,112 @@
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, min-content));
+
+  &__box {
+    height: 65rem;
+    background-size: cover;
+    background-position: top;
+    padding: $box-padding;
+    color: $white;
+
+    &-paragraph {
+      width: 40%;
+    }
+
+    &--1 {
+      background-image: url("https://ad-webapp.s3.amazonaws.com/box-1-bg.png");
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .boxes__box-text-container {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: $box-padding;
+      }
+
+      .boxes__box-title {
+        color: $white;
+        font-size: 5rem;
+
+        &-span {
+          color: black;
+          font-family: $font-secondary;
+          color: $color-secondary;
+          font-size: 7rem;
+          text-transform: capitalize;
+          transform: translateY();
+          display: inline-block;
+
+          letter-spacing: 0.1rem;
+        }
+      }
+
+      .boxes__box-paragraph {
+        margin: 0 auto;
+      }
+    }
+
+    &--2 {
+      background-image: url("https://ad-webapp.s3.amazonaws.com/box-2-bg.png");
+      position: relative;
+
+      .boxes__box-title {
+        font-style: italic;
+        font-size: 8rem;
+        width: 40%;
+        line-height: 1;
+      }
+
+      .boxes__box-paragraph {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: $box-padding;
+      }
+    }
+    &--3 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-image: url("https://ad-webapp.s3.amazonaws.com/box-3-bg.png");
+
+      .boxes__box-title {
+        font-style: italic;
+        font-size: 8rem;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+
+      .boxes__box-subtitle {
+        letter-spacing: 0.25rem;
+        font-size: 3rem;
+      }
+
+      .boxes__box-paragraph {
+        text-align: center;
+        position: absolute;
+        bottom: $box-padding;
+      }
+    }
+    &--4 {
+      background-image: url("https://ad-webapp.s3.amazonaws.com/box-4-bg.png");
+      color: $black;
+
+      .boxes__box-title {
+        font-size: 8rem;
+        width: 40%;
+        line-height: 1;
+      }
+
+      .boxes__box-span {
+        font-family: $font-secondary;
+        color: $color-secondary;
+        display: inline-block;
+        transform: translateY(-5px);
+      }
+    }
+  }
+}

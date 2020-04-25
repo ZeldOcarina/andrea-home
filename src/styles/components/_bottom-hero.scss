@@ -1,0 +1,21 @@
+.bottom-hero {
+  background-image: url("https://ad-webapp.s3.amazonaws.com/second-section-background.png");
+  height: 70vh;
+  background-size: cover;
+  background-position: top;
+
+  &__title {
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  &__paragraph {
+    width: 24%;
+    margin: 0 auto;
+    transform: translateX(15rem);
+    letter-spacing: 0.1rem;
+  }
+}

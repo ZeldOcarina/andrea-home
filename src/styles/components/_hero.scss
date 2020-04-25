@@ -1,0 +1,46 @@
+.hero {
+  height: 100vh;
+  background-image: url("https://ad-webapp.s3.amazonaws.com/top-banner.jpg");
+  background-position: right top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  justify-content: center;
+
+  &__text-container {
+    margin-left: 20rem;
+    width: 35%;
+  }
+
+  &__title-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+  }
+
+  &__title {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: $white;
+    z-index: 1;
+    font-size: 7rem;
+  }
+
+  &__brush {
+    width: 50rem;
+  }
+
+  &__subtitle {
+    letter-spacing: 0.4rem;
+    padding: 1.5rem 0;
+  }
+
+  &__paragraph {
+    line-height: 1.5;
+    font-size: 1.8rem;
+  }
+}
